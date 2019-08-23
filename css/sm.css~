@@ -17,4 +17,9 @@ h1, nav {
 
 .content a:hover {
   box-shadow: none;
+  text-shadow: none;
+}
+
+#home-nav a {
+  margin-top: 0em;
 }
