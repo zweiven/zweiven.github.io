@@ -1,0 +1,20 @@
+#home-blurb {
+  margin-top: 0;
+  margin-bottom: 1.0em;
+  text-align: center;
+  font-size: 0.7em;
+  max-width: 600px;
+}
+
+h1, nav {
+  font-family: 'Montserrat';
+}
+
+.content a {
+  color: #1a80b6;
+  box-shadow: none;
+}
+
+.content a:hover {
+  box-shadow: none;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://stevejmiller.com/contact/</loc>
+    <lastmod>2019-08-23T10:40:49-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/</loc>
+    <lastmod>2019-08-23T10:40:49-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/prospectives/</loc>
+    <lastmod>2019-08-22T16:42:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/teaching/</loc>
+    <lastmod>2019-08-22T16:20:11-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/research/</loc>
+    <lastmod>2019-08-22T16:20:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/tags/</loc>
+  </url>
+  
+</urlset>
