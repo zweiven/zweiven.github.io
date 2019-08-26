@@ -23,3 +23,15 @@ h1, nav {
 #home-nav a {
   margin-top: 0;
 }
+
+hr {
+  border-width: 0.5px;
+  border-style: solid;
+  width: 100%;
+  margin: 0.1em;
+  opacity: 1;
+}
+
+h2 {
+  margin-block-end: 0.2em;
+}
