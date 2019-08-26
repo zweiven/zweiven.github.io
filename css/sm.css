@@ -22,6 +22,11 @@ h1, nav {
 
 #home-nav a {
   margin-top: 0;
+  color: #494f5c;  
+}
+
+#home-social a {
+  color: #494f5c;
 }
 
 hr {
@@ -34,4 +39,12 @@ hr {
 
 h2 {
   margin-block-end: 0.2em;
+}
+
+html {
+  background: #ffffff;
+}
+
+body, button, input, select, textarea {
+  color: #494f5c;  
 }
