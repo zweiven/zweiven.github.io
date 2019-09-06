@@ -6,6 +6,16 @@
   max-width: 600px;
 }
 
+#home-pronouns {
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+#home-subtitle {
+  margin-bottom: 0.5em;
+}
+
 h1, nav {
   font-family: 'Montserrat';
 }

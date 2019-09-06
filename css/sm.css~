@@ -6,6 +6,13 @@
   max-width: 600px;
 }
 
+#home-pronouns {
+  margin-top: 0;
+  margin-bottom: 0em;
+  text-align: center;
+  font-size: 0.5em;
+}
+
 h1, nav {
   font-family: 'Montserrat';
 }
@@ -22,6 +29,11 @@ h1, nav {
 
 #home-nav a {
   margin-top: 0;
+  color: #494f5c;  
+}
+
+#home-social a {
+  color: #494f5c;
 }
 
 hr {
@@ -38,5 +50,8 @@ h2 {
 
 html {
   background: #ffffff;
-  
+}
+
+body, button, input, select, textarea {
+  color: #494f5c;  
 }
