@@ -8,9 +8,12 @@
 
 #home-pronouns {
   margin-top: 0;
-  margin-bottom: 0em;
   text-align: center;
   font-size: 0.5em;
+}
+
+#home-subtitle {
+  margin-bottom: 0.5em;
 }
 
 h1, nav {
@@ -54,4 +57,22 @@ html {
 
 body, button, input, select, textarea {
   color: #494f5c;  
+}
+
+.pplpic {
+  float: left;
+}
+.pplpic img {
+  margin: 0em 1em 1em 0em;
+}
+
+.pplpic + h3 {
+  margin: 0em;
+}
+.pplpic + h3 + p {
+  margin: 0em;
+}
+
+.pplpic - p {
+  margin: 0em;
 }

@@ -6,10 +6,22 @@
     <description>Recent content on Steve Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2019 10:40:49 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2019 01:01:01 -0600</lastBuildDate>
     
 	<atom:link href="http://stevejmiller.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>People</title>
+      <link>http://stevejmiller.com/people/</link>
+      <pubDate>Wed, 18 Sep 2019 01:01:01 -0600</pubDate>
+      
+      <guid>http://stevejmiller.com/people/</guid>
+      <description>Current Students  Ian Luby PhD @ UMN
+Co-advisor: Steve Polasky
+I am a natural resource economist answering questions at the nexus of policy, science, and economics. Within that space my research has two main areas of emphasis:
+1) I use economic and scientific models to analyze and improve conservation policy and planning. I have projects that examine policy at every scale from planning a global strategy for forest conservation to improving targeting of local easements.</description>
+    </item>
     
     <item>
       <title>Contact</title>

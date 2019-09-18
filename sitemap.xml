@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://stevejmiller.com/contact/</loc>
-    <lastmod>2019-08-23T10:40:49-06:00</lastmod>
+    <loc>http://stevejmiller.com/people/</loc>
+    <lastmod>2019-09-18T01:01:01-06:00</lastmod>
   </url>
   
   <url>
     <loc>http://stevejmiller.com/</loc>
+    <lastmod>2019-09-18T01:01:01-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stevejmiller.com/contact/</loc>
     <lastmod>2019-08-23T10:40:49-06:00</lastmod>
   </url>
   

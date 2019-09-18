@@ -58,3 +58,18 @@ html {
 body, button, input, select, textarea {
   color: #494f5c;  
 }
+
+.pplpic {
+  float: right;
+}
+.pplpic img {
+  margin: 0.4em 0em 1em 1em;
+}
+
+.students h3 {
+  margin: 0em;
+}
+
+.students h3 + p, .students .pplpic + p + p {
+  margin: 0em;
+}
