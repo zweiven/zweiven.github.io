@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Steve Miller</title>
-    <link>http://stevejmiller.com/</link>
+    <link>https://stevejmiller.com/</link>
     <description>Recent content on Steve Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Sep 2019 01:01:01 -0600</lastBuildDate>
     
-	<atom:link href="http://stevejmiller.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stevejmiller.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>People</title>
-      <link>http://stevejmiller.com/people/</link>
+      <link>https://stevejmiller.com/people/</link>
       <pubDate>Wed, 18 Sep 2019 01:01:01 -0600</pubDate>
       
-      <guid>http://stevejmiller.com/people/</guid>
+      <guid>https://stevejmiller.com/people/</guid>
       <description>Current Students  Ian Luby PhD @ UMN (Advised w/ Steve Polasky)
 I am a natural resource economist answering questions at the nexus of policy, science, and economics. Within that space my research has two main areas of emphasis:
 1) I use economic and scientific models to analyze and improve conservation policy and planning. I have projects that examine policy at every scale from planning a global strategy for forest conservation to improving targeting of local easements.</description>
@@ -24,10 +24,10 @@ I am a natural resource economist answering questions at the nexus of policy, sc
     
     <item>
       <title>Contact</title>
-      <link>http://stevejmiller.com/contact/</link>
+      <link>https://stevejmiller.com/contact/</link>
       <pubDate>Fri, 23 Aug 2019 10:40:49 -0600</pubDate>
       
-      <guid>http://stevejmiller.com/contact/</guid>
+      <guid>https://stevejmiller.com/contact/</guid>
       <description>Email
 steve.j.miller@colorado.edu
 Office
@@ -37,10 +37,10 @@ SEEC 238C, CU Boulder East Campus
     
     <item>
       <title>Opportunities</title>
-      <link>http://stevejmiller.com/opportunities/</link>
+      <link>https://stevejmiller.com/opportunities/</link>
       <pubDate>Thu, 22 Aug 2019 16:42:13 -0600</pubDate>
       
-      <guid>http://stevejmiller.com/opportunities/</guid>
+      <guid>https://stevejmiller.com/opportunities/</guid>
       <description>Prospective Graduate Students I am currently recruiting both MS and PhD students to work with me (and others in ENVS!) on research that integrates environmental economics, computer science, and a range of natural sciences.
 I encourage students from all backgrounds to apply, and especially students whose backgrounds, experiences, and perspectives are underrepresented in the fields I work in.
 Check out the people page to learn more about the students I&amp;rsquo;ve been lucky enough to work with so far.</description>
@@ -48,10 +48,10 @@ Check out the people page to learn more about the students I&amp;rsquo;ve been l
     
     <item>
       <title>Teaching</title>
-      <link>http://stevejmiller.com/teaching/</link>
+      <link>https://stevejmiller.com/teaching/</link>
       <pubDate>Thu, 22 Aug 2019 16:20:11 -0600</pubDate>
       
-      <guid>http://stevejmiller.com/teaching/</guid>
+      <guid>https://stevejmiller.com/teaching/</guid>
       <description>Below are courses I&amp;rsquo;ve taught, with links to syllabi and student evaluations where available.
 CU
  Introduction to Developing Environmental Solutions Syllabus | Evals: Fall 2020 Adapting to a Warming World (Instructor) Syllabus | Evals: 2020  UMN
@@ -60,13 +60,12 @@ CU
     
     <item>
       <title>Research</title>
-      <link>http://stevejmiller.com/research/</link>
+      <link>https://stevejmiller.com/research/</link>
       <pubDate>Thu, 22 Aug 2019 16:20:06 -0600</pubDate>
       
-      <guid>http://stevejmiller.com/research/</guid>
+      <guid>https://stevejmiller.com/research/</guid>
       <description>I am broadly interested in three topics:
- How do environmental shocks (e.g. heat waves, regime shifts) influence economic activity, and how do policies, mitigation, and adaptation moderate those effects? What do environmental policies impact innovation (both product and process) that can improve environmental outcomes? How can machine learning and econometrics/applied statistics be combined to better answer research questions?  Publications
- K. Chua, J. Coggins, S. Miller, and H. Mohtadi.</description>
+ How do environmental shocks (e.g. heat waves, regime shifts) influence economic activity, and how do policies, mitigation, and adaptation moderate those effects? What do environmental policies impact innovation (both product and process) that can improve environmental outcomes? How can machine learning and econometrics/applied statistics be combined to better answer research questions?  Publications (Chances are Google Scholar is more up to date)</description>
     </item>
     
   </channel>
