@@ -1,50 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Steve Miller</title>
-    <link>https://stevejmiller.com/</link>
+    <link>http://stevejmiller.com/</link>
     <description>Recent content on Steve Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2019 01:01:01 -0600</lastBuildDate>
-    
-	<atom:link href="https://stevejmiller.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://stevejmiller.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>People</title>
-      <link>https://stevejmiller.com/people/</link>
+      <link>http://stevejmiller.com/people/</link>
       <pubDate>Wed, 18 Sep 2019 01:01:01 -0600</pubDate>
       
-      <guid>https://stevejmiller.com/people/</guid>
+      <guid>http://stevejmiller.com/people/</guid>
       <description>Current Students Naia Ormaza Zulueta PHD @ CU (Advised w/Zia Mehrabi)
 More info coming soon. Welcome Naia!
 Chris Quinn PhD @ CU
 More info coming soon. Welcome Chris!
 Current Undergraduate Collaborators (@ CU) Evie Clarke, Logan Mathews, Ebenezer Solomon
-Graduated Students  Ian Luby PhD @ UMN (Advised w/ Steve Polasky)
+Graduated Students Ian Luby PhD @ UMN (Advised w/ Steve Polasky)
 I am a natural resource economist answering questions at the nexus of policy, science, and economics. Within that space my research has two main areas of emphasis:</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://stevejmiller.com/contact/</link>
+      <link>http://stevejmiller.com/contact/</link>
       <pubDate>Fri, 23 Aug 2019 10:40:49 -0600</pubDate>
       
-      <guid>https://stevejmiller.com/contact/</guid>
+      <guid>http://stevejmiller.com/contact/</guid>
       <description>Email
 steve.j.miller@colorado.edu
 Office
-SEEC 238C, CU Boulder East Campus
- </description>
+SEEC 238C, CU Boulder East Campus</description>
     </item>
     
     <item>
       <title>Opportunities</title>
-      <link>https://stevejmiller.com/opportunities/</link>
+      <link>http://stevejmiller.com/opportunities/</link>
       <pubDate>Thu, 22 Aug 2019 16:42:13 -0600</pubDate>
       
-      <guid>https://stevejmiller.com/opportunities/</guid>
+      <guid>http://stevejmiller.com/opportunities/</guid>
       <description>Prospective Graduate Students I am currently recruiting both MS and PhD students to work with me (and others in ENVS!) on research that integrates environmental economics, computer science, and a range of natural sciences.
 I encourage students from all backgrounds to apply, and especially students whose backgrounds, experiences, and perspectives are underrepresented in the fields I work in.
 Check out the people page to learn more about the students I&amp;rsquo;ve been lucky enough to work with so far.</description>
@@ -52,24 +46,25 @@ Check out the people page to learn more about the students I&amp;rsquo;ve been l
     
     <item>
       <title>Teaching</title>
-      <link>https://stevejmiller.com/teaching/</link>
+      <link>http://stevejmiller.com/teaching/</link>
       <pubDate>Thu, 22 Aug 2019 16:20:11 -0600</pubDate>
       
-      <guid>https://stevejmiller.com/teaching/</guid>
+      <guid>http://stevejmiller.com/teaching/</guid>
       <description>Below are courses I&amp;rsquo;ve taught, with links to syllabi and student evaluations where available.
-CU * Statistical Analysis of Environmental Challenges | Evals: Spring 2022 * Human Dimensions of Environmental Studies | Evals: Spring 2022 * Introduction to Developing Environmental Solutions Syllabus | Evals: Fall 2020, Spring 2021 * Adapting to a Warming World (Instructor) Syllabus | Evals: 2020, Fall 2021
-UMN
- Programming for Econometrics (Instructor) Syllabus | Evals: 2016, 2018 Big Data Methods in Economics (Instructor) Syllabus | Evals: 2016, 2018 Methods of Economic Data Analysis (Instructor) Syllabus | Evals: 2015, 2016, 2017, 2018 Natural Resource Economics (Instructor) Syllabus | Evals: 2018  UCSB</description>
+CU
+Statistical Analysis of Environmental Challenges | Evals: Spring 2022 Human Dimensions of Environmental Studies | Evals: Spring 2022 Introduction to Developing Environmental Solutions Syllabus | Evals: Fall 2020, Spring 2021 Adapting to a Warming World (Instructor) Syllabus | Evals: 2020, Fall 2021 UMN
+Programming for Econometrics (Instructor) Syllabus | Evals: 2016, 2018 Big Data Methods in Economics (Instructor) Syllabus | Evals: 2016, 2018 Methods of Economic Data Analysis (Instructor) Syllabus | Evals: 2015, 2016, 2017, 2018 Natural Resource Economics (Instructor) [Syllabus] (/syllabi/Syllabus_APEC_8601_Spring_2018.</description>
     </item>
     
     <item>
       <title>Research</title>
-      <link>https://stevejmiller.com/research/</link>
+      <link>http://stevejmiller.com/research/</link>
       <pubDate>Thu, 22 Aug 2019 16:20:06 -0600</pubDate>
       
-      <guid>https://stevejmiller.com/research/</guid>
+      <guid>http://stevejmiller.com/research/</guid>
       <description>I am broadly interested in three topics:
- How do environmental shocks (e.g. heat waves, regime shifts) influence economic activity, and how do policies, mitigation, and adaptation moderate those effects? How can machine learning and econometrics/applied statistics be combined to better answer environmental questions? How can tools commonly applied in economics (e.g., program evaluation, dynamic optimization) help improve conservation outcomes?  Publications (Chances are Google Scholar is more up to date)</description>
+How do environmental shocks (e.g. heat waves, regime shifts) influence economic activity, and how do policies, mitigation, and adaptation moderate those effects? How can machine learning and econometrics/applied statistics be combined to better answer environmental questions? How can tools commonly applied in economics (e.g., program evaluation, dynamic optimization) help improve conservation outcomes? Publications (Chances are Google Scholar is more up to date)
+I. Luby, S.</description>
     </item>
     
   </channel>
