@@ -9,8 +9,11 @@ library(mlr3learners)
 library(ArCo)
 library(glmnet)
 library(MCPanel)
+library(grf)
+
+
 # Load some sample data
-xs.data = fread("https://stevejmiller.com/ml/datasets/xsdata_treatment.csv")
+xs.data = fread("http://stevejmiller.com/ml/datasets/xsdata_treatment.csv")
 
 # Estimate OLS
 ols.mod = lm(y ~ ., data=xs.data)
@@ -53,11 +56,17 @@ dml.mod$fit()
 # Print estimates
 print(dml.mod)
 
+###############################
+# IV
+###############################
+
+iv.data = fread("http://stevejmiller.com/ml/datasets/ivdata.csv")
+
 
 ###############################
 # Artificial controls
 ###############################
-sc.data = fread("https://stevejmiller.com/ml/datasets/scdata.csv")
+sc.data = fread("http://stevejmiller.com/ml/datasets/scdata.csv")
 dcast(sc.data, i ~ t, value.var = y)
 arco.sc.data = panel_to_ArCo_list(sc.data, time="t", unit="i", variables="y")
 
@@ -137,5 +146,43 @@ MCPanelSE = function(data.mat,
 mc.mod.se = MCPanelSE(data.mat, obs.mask, replications = 100)
 
 
+# Train an instrumental forest.
+# In this example, we have 3 confounders
+# that also modify the treatment function linearly (slope=1)
+# and an instrument
+iv.mod = instrumental_forest(X = as.matrix(iv.data[,c("x1", "x2", "x3")]), # covariates
+                             Y = iv.data$y,                                # outcome
+                             W = iv.data$w,                                # treatment
+                             Z = iv.data$z,                                # instrument
+                             num.trees = 5000                              # grow more trees for variance estimation
+                             )
 
-# GRFs for IV 
+# Visualizing/summarizing treatment effect estimates is always
+# messy. We'll make a partial dependence plot by
+# getting estimates of treatment effects at some test points
+# rather than at the training points. 
+# Specifically, we'll set x1 to be a grid from -4 to 4 and
+# x2 and x3 will be held at zero.
+x.test = matrix(0, nrow=51, ncol=3)
+x.test[,1] = seq(from=-4, to=4, length.out=51)
+
+# Predict the treatment effect at those points
+iv.te.preds = predict(iv.mod, newdata = x.test, estimate.variance = TRUE)
+
+# Plot treatment effect against x1
+# Assemble data
+pred.comp = data.table(preds = iv.te.preds$predictions, 
+                       lower.ci = iv.te.preds$predictions - 1.96*sqrt(iv.te.preds$variance.estimates),
+                       upper.ci = iv.te.preds$predictions + 1.96*sqrt(iv.te.preds$variance.estimates),
+                       x1=x.test[,1])
+# Plot point estimates and CI
+plot(preds ~ x1, data=pred.comp, type="l")
+lines(upper.ci ~ x1, data=pred.comp, col="red")
+lines(lower.ci ~ x1, data=pred.comp, col="red")
+
+# From those TE estimates you can actually see one property of tree-based methods:
+# they tend to flatten as they approach the edges of their support.
+hist(iv.data$x1)
+# That's not unreasonable -- forests are built on piecewise-constant
+# building blocks (trees) so they extrapolate as a constant
+

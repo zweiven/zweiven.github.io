@@ -8,8 +8,8 @@ library(haven)         # for reading in .dta files
 # Basic examples with simulated data
 ##################################################
 set.seed(42)
-xs.data = fread("https://stevejmiller.com/ml/datasets/xsdata_sparse.csv")
-#xs.data = fread("https://stevejmiller.com/ml/datasets/xsdata_nonlinear.csv")
+xs.data = fread("http://stevejmiller.com/ml/datasets/xsdata_sparse.csv")
+#xs.data = fread("http://stevejmiller.com/ml/datasets/xsdata_nonlinear.csv")
 xs.data    # will print first/last 5 rows of data to console
 
 # To assess true out-of-sample performance, we can split our data into
@@ -203,87 +203,4 @@ ens.preds.individual.out = predict(ens.list, newdata=test.data)
 apply(cbind(ens.preds.individual.out, "ensemble" = ens.preds.out),
       2,
       FUN = function(preds) RMSE(preds, test.data$y))
-
-
-
-
-
-
-
-##################
-# Use LASSO to estimate models using sample data from 
-# https://www.sciencedirect.com/science/article/pii/S0140988320302826#ac0005
-# They give 2000 records for each of 3 sample years
-
-# Read in the Stata version of the data. 
-# The read_data function from the haven package in R can do this for us.
-
-hce.data = read_dta('~/Downloads/Data Sample.dta')
-
-# Estimate using glmnet. should do this within caret
-# to illustrate that framework
-
-outcome.cols = colnames(hce.data) %in% c("direct_co2", "indrect_co2", "total_co2")
-predictors = as.matrix(hce.data[,!outcome.cols])
-outcomes = hce.data$direct_co2
-
-# center and scale predictors so that penalization doesn't favor some predictors
-data.preprocessor = preProcess(x = predictors,
-                               method = c("center", "scale"))
-preprocessed.predictors = predict(data.preprocessor,
-                                  predictors)
-
-# train on the full data, fixing weights
-lasso.mod = train(y = outcomes,                      # outcome vector
-                  x = preprocessed.predictors,       # predictor matrix
-                  method = 'glmnet',                 # the glmnet package does the work behind the scenes (for nonlinear elastic nets)
-                  tuneGrid = expand.grid(alpha=0,    # weight attached to ridge penalty component
-                                         lambda=0.5))  # weight attached to overall penalty
-
-# generate predictions. 
-lasso.preds = predict(object = lasso.mod,
-                      newdata = preprocessed.predictors)
-
-# simple scatterplot of our predictions vs observed outcomes
-# Nobody said this was a *good* LASSO application.
-plot(outcomes ~ lasso.preds) 
-abline(a=0, b=1, col="red")
-# NB: If this were your study, 
-# you might consider adding in a bunch of interactions and other nonlinear
-# terms. That way LASSO has a much richer set of predictors from which
-# to pick.
-
-# In practice, we would typically tune lambda to choose a penalty that
-# does best out of sample (as assessed via cross-validation). 
-# The caret package makes this fairly straightforward.
-# By default, it uses RMSE to compare prediction quality.
-# You can change this via the metric argument to train
-candidate.lambdas = c(seq(from=0, to=0.3, length.out = 100))     # lambdas to assess
-lasso.tuned.mod = train(y = outcomes,                      # outcome vector
-                        x = preprocessed.predictors,       # predictor matrix
-                        method = 'glmnet',                 # the glmnet package does the work behind the scenes (for nonlinear elastic nets)
-                        trControl = trainControl(method = "cv", 
-                                                 number = 10), # do 10-fold cross-validation to assess performance
-                        tuneGrid = expand.grid(alpha = 1,    # weight attached to ridge penalty component
-                                               lambda = candidate.lambdas))  # weight attached to overall penalty
-
-# here's the best lambda
-lasso.tuned.mod$bestTune
-# and the coefficients from that model
-coef(lasso.tuned.mod$finalModel, lasso.tuned.mod$bestTune$lambda)
-# and predictions
-predict(object = lasso.tuned.mod, 
-        newdata = preprocessed.predictors)
-
-
-##############################################
-# Support vector regression for same prediction task
-##############################################
-candidate.costs = seq(from=1, to=3, length.out=3)
-svm.tuned.mod = train(y = outcomes,                           # outcome vector
-                        x = preprocessed.predictors,            # predictor matrix
-                        method = 'svmLinear',                   # do SVM with a linear kernel (basically just a hyperplane)
-                        trControl = trainControl(method = "cv", 
-                                                 number = 5), # do 5-fold cross-validation to assess performance
-                        tuneGrid = expand.grid(C = candidate.costs))  # prediction error penalty weight
 
