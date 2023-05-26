@@ -36,6 +36,9 @@ lasso.mod = train(y = train.data$y,                      # outcome vector
 lasso.mod$bestTune
 # and the coefficients from that model
 coef(lasso.mod$finalModel, lasso.mod$bestTune$lambda)
+# If you want to get the indices of coefficients that were selected
+which(coef(lasso.mod$finalModel, lasso.mod$bestTune$lambda)!=0)
+
 # and predictions...
 # in-sample
 lasso.preds.in = predict(object = lasso.mod)
@@ -163,10 +166,13 @@ all.preds = list("OLS" = lm.preds.out,
                  "Random forest" = rf.preds.out,
                  "Neural net" = nnet.preds.out,
                  "xgboost" = xgb.preds.out)
-for(i in 1:length(all.preds)) {
-  print(paste0(names(all.preds)[i], ": ",
-               RMSE(all.preds[[i]], test.data$y)))
-}
+rbindlist(lapply(1:length(all.preds), FUN=function(i) {
+  rsq = 1- sum((all.preds[[i]]-test.data$y)^2)/sum((test.data$y-mean(test.data$y))^2)
+  data.table(method=names(all.preds)[[i]],
+             rmse = RMSE(all.preds[[i]], test.data$y),
+             rsq = rsq
+             )
+}))
 
 # We could combine one or more of these approaches in an ensemble
 # For example, let's combine LASSO and SVM

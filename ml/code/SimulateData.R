@@ -1,5 +1,6 @@
-library(MASS)
-library(data.table)
+# Load a couple of libraries for data generation
+library(MASS)           # makes multivariate normal sampling very simple
+library(data.table)     # for data manipulation
 
 set.seed(0) # set random number generator seed for replicability
 # Generate a simple cross-sectional dataset

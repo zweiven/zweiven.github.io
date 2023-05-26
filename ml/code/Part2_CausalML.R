@@ -56,18 +56,12 @@ dml.mod$fit()
 # Print estimates
 print(dml.mod)
 
-###############################
-# IV
-###############################
-
-iv.data = fread("http://stevejmiller.com/ml/datasets/ivdata.csv")
 
 
 ###############################
 # Artificial controls
 ###############################
 sc.data = fread("http://stevejmiller.com/ml/datasets/scdata.csv")
-dcast(sc.data, i ~ t, value.var = y)
 arco.sc.data = panel_to_ArCo_list(sc.data, time="t", unit="i", variables="y")
 
 arco.mod = fitArCo(data = arco.sc.data, 
@@ -145,6 +139,11 @@ MCPanelSE = function(data.mat,
 }
 mc.mod.se = MCPanelSE(data.mat, obs.mask, replications = 100)
 
+###############################
+# IV
+###############################
+
+iv.data = fread("http://stevejmiller.com/ml/datasets/ivdata.csv")
 
 # Train an instrumental forest.
 # In this example, we have 3 confounders
@@ -183,6 +182,15 @@ lines(lower.ci ~ x1, data=pred.comp, col="red")
 # From those TE estimates you can actually see one property of tree-based methods:
 # they tend to flatten as they approach the edges of their support.
 hist(iv.data$x1)
-# That's not unreasonable -- forests are built on piecewise-constant
+# That's not a shock -- forests are built on piecewise-constant
 # building blocks (trees) so they extrapolate as a constant
 
+# If we want to identify the "importance" of a variable for "explaining"
+# heterogeneity (in a predictive sense), there are lots of metrics.
+# The grf package supports the number of times a variable was split on
+# possibly weighting early splits more. 
+iv.var.imp = variable_importance(iv.mod)
+iv.var.imp
+# Note this is also spit out when we simply type the name of the
+# fitted forest object, but you might want to extract it
+iv.mod
